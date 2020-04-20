@@ -8,6 +8,6 @@ Library  药品管理.TestOne   WITH NAME  TestOne
 
 *** Test Cases ***
 
-第一个测试用例
+药品管理
 
   TestOne.teststeps

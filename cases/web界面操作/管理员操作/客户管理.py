@@ -14,12 +14,16 @@ from lib.login import get_global_webdriver
 #     INFO('suite_teardown')
 #     driver = get_global_webdriver()
 #     driver.quit()
+# 给用例添加标签(全局)
+force_tags = ['登录功能', '冒烟测试', 'UI测试']
+
 
 
 class TestOne:
     # 测试用例的名字
     name = '第一个测试用例'
-
+    # 给用例添加标签(单个)
+    tags = ['登录功能', '冒烟测试', 'UI测试']
     # 单个测试用例初始化操作
     # def setup(self):
     #     INFO('单个用例初始化')
@@ -60,15 +64,15 @@ class TestTwo:
         STEP(1, '填入用户信息')
         # 填入信息
         driver.find_element_by_xpath(
-            '//*[@id="root"]/div/div[1]/div[1]/div[1]/input').send_keys('肖颖')
+            '//*[@id="root"]/div/div[1]/div[1]/div[1]/input').send_keys('小颖')
         driver.find_element_by_xpath(
             '//*[@id="root"]/div/div[1]/div[1]/div[2]/input').send_keys(
-                '18811111111')
+            '18811111111')
         driver.find_element_by_xpath(
             '//*[@id="root"]/div/div[1]/div[1]/div[3]/input').send_keys('xy_11')
         driver.find_element_by_xpath(
             '//*[@id="root"]/div/div[1]/div[1]/div[4]/input').send_keys(
-                '88888888')
+            '88888888')
         driver.find_element_by_css_selector('#root textarea').send_keys(
             '123456')
         driver.find_element_by_xpath(
@@ -82,7 +86,7 @@ class TestTwo:
 
         # 期望结果
         expected = [
-            '客户名：', '肖颖', '登录名：', 'xy_11', '联系电话：', '18811111111', '描述：',
+            '客户名：', '小颖', '登录名：', 'xy_11', '联系电话：', '18811111111', '描述：',
             '123456'
         ]
         STEP(2, '验证展示的数据是否和期望值相同')

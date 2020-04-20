@@ -1,6 +1,6 @@
 class TestOne:
     # 测试用例的名字
-    name = '第一个测试用例'
+    name = '药品管理'
 
     # 单个测试用例初始化操作
     # def setup(self):
