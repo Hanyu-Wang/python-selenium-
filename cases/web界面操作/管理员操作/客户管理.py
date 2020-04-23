@@ -18,12 +18,12 @@ from lib.login import get_global_webdriver
 force_tags = ['登录功能', '冒烟测试', 'UI测试']
 
 
-
 class TestOne:
     # 测试用例的名字
     name = '第一个测试用例'
     # 给用例添加标签(单个)
     tags = ['登录功能', '冒烟测试', 'UI测试']
+
     # 单个测试用例初始化操作
     # def setup(self):
     #     INFO('单个用例初始化')
@@ -67,12 +67,13 @@ class TestTwo:
             '//*[@id="root"]/div/div[1]/div[1]/div[1]/input').send_keys('小颖')
         driver.find_element_by_xpath(
             '//*[@id="root"]/div/div[1]/div[1]/div[2]/input').send_keys(
-            '18811111111')
+                '18811111111')
         driver.find_element_by_xpath(
-            '//*[@id="root"]/div/div[1]/div[1]/div[3]/input').send_keys('xy_11')
+            '//*[@id="root"]/div/div[1]/div[1]/div[3]/input').send_keys(
+                'xy_11')
         driver.find_element_by_xpath(
             '//*[@id="root"]/div/div[1]/div[1]/div[4]/input').send_keys(
-            '88888888')
+                '88888888')
         driver.find_element_by_css_selector('#root textarea').send_keys(
             '123456')
         driver.find_element_by_xpath(
